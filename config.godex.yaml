@@ -1,0 +1,39 @@
+discord:
+  token: NzIyNjYxNDQwMTEyMjk1OTU5.XumU6Q.wFFb3JUIeawUd_kSHM-1az4Cq4k
+bot:
+  defaultRefreshInterval: 5m
+  invasion:
+    enabled: true
+    queueLimit: 8
+    channelID: 738608917487288380
+  specialQuest:
+    enabled: true
+    queueLimit: 8
+    channelID: 738608955110195210
+  pokemonQuest:
+    enabled: true
+    queueLimit: 8
+    channelID: 738608851158564884
+  stardustQuest:
+    enabled: true
+    queueLimit: 8
+    channelID: 738608887506403378
+  itemQuest:
+    enabled: true
+    queueLimit: 8
+    channelID: 738608819944292372
+  commandPrefix: "!"
+  embeds:
+    footer:
+      iconURL: https://i.gyazo.com/2f7a29184843f57e58999e3e55883cdc.png
+      text: Powered by GoDex
+database:
+  kind: mongodb
+  address: 172.28.1.2:27017
+  username: root
+  password: example
+  name: questrocket
+queue:
+  redis:
+    address: 172.28.1.4:6379
+    database: 1

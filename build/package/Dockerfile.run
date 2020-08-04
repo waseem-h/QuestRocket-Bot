@@ -1,0 +1,14 @@
+FROM alpine:3.11
+
+RUN apk add --update --no-cache ca-certificates
+
+COPY Quests /bin/Quests
+
+ADD https://github.com/golang/go/raw/master/lib/time/zoneinfo.zip /zoneinfo.zip
+ENV ZONEINFO /zoneinfo.zip
+RUN chown 65534:65534 /zoneinfo.zip
+
+# On alpine 'nobody' has uid 65534
+USER 65534
+
+ENTRYPOINT ["/bin/Quests"]
